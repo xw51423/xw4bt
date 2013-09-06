@@ -1,0 +1,12 @@
+
+/* test for for loop, less-than operator, and breaks*/
+
+Var n1;
+
+BEGIN
+FOR (n1=1; n1<5; n1++)
+{
+  TURN n1;
+  JUMP n1;
+}
+END
