@@ -46,15 +46,15 @@ WHILE           return WHILE;
 IF              return IF;
 THEN            return THEN;
 ELSE            return ELSE;
-\{				return LEFTBRAKETS;
-\}				return RIGHTBRAKETS;
+\{              return LEFTBRAKETS;
+\}              return RIGHTBRAKETS;
 ,               return COMMA;
 PROCEDURE       return PROCEDURE;
-\> 				return BIGGER;
-\<				return SMALLER;
-\>= 			return BIGGEROREQUAL;
-\<=				return SMALLEROREQUAL;
-==      		return EQUAL;
+\>              return BIGGER;
+\<              return SMALLER;
+\>=             return BIGGEROREQUAL;
+\<=             return SMALLEROREQUAL;
+==              return EQUAL;
 
 
 .               fprintf(stderr,"Unexpected character %c (%2X)\n",yytext[0],yytext[0]);
