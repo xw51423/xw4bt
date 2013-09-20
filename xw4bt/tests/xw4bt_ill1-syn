@@ -1,4 +1,4 @@
-//test variable declaration, id+num*num
+//test variable declaration, JUMP with assign
 
 VAR lg, lp;
 VAR i

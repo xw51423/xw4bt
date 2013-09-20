@@ -1,4 +1,4 @@
-//test single computaion, mix computaion
+//test single computaion, BEGIN without END
 
 VAR i;
 i=1;
@@ -8,8 +8,7 @@ BEGIN
 TURN i;
 i = i + 2;
 sin (2*2);
-JUMP i = 2+3*4;
+JUMP  -sin 3*2
 TURN sin i+2*3
-END
 
 
