@@ -1,7 +1,7 @@
 
 %{
 #include "symtab.h"
-#include "token.h"
+#include "turtle-xw4bt.tab.h"
 %}
 
 %%
@@ -42,6 +42,26 @@ sqrt            return SQRT;
 [0-9]+\.[0-9]+  yylval.d = atof(yytext);  return FLOAT;
 [0-9]+          yylval.i = atoi(yytext);  return NUMBER;
 
+
+WHILE           return WHILE;
+IF              return IF;
+ELSE            return ELSE;
+\{              return LEFTBRAKETS;
+\}              return RIGHTBRAKETS;
+PROCEDURE       return PROCEDURE;
+CALL            return CALL;
+PARAM           return PARAM;
+\>              return BIGGER;
+\<              return SMALLER;
+\>=             return BIGGEROREQUAL;
+\<=             return SMALLEROREQUAL;
+==              return EQUAL;
+!=              return NOTEQUAL;
+
+
+
+
 .               fprintf(stderr,"Unexpected character %c (%2X)\n",yytext[0],yytext[0]);
 
 %%
+
