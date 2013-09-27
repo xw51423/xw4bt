@@ -50,11 +50,14 @@ ELSE            return ELSE;
 \}              return RIGHTBRAKETS;
 ,               return COMMA;
 PROCEDURE       return PROCEDURE;
+CALL            return CALL;
+PARAM           return PARAM;
 \>              return BIGGER;
 \<              return SMALLER;
 \>=             return BIGGEROREQUAL;
 \<=             return SMALLEROREQUAL;
 ==              return EQUAL;
+!=              return NOTEQUAL;
 
 
 .               fprintf(stderr,"Unexpected character %c (%2X)\n",yytext[0],yytext[0]);

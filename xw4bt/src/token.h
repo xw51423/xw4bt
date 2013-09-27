@@ -38,6 +38,9 @@
 #define SMALLEROREQUAL 292
 #define WHILE 293
 #define EQUAL 294
+#define NOTEQUAL 295
+#define CALL 296
+#define PARAM 297
 
 
 
