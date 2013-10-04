@@ -1,0 +1,48 @@
+//break from 3 aspect, all 3 program can compile, but cannot draw path
+
+//number of parameters does not match in declaration and in calling 
+JUMP 40;
+PROCEDURE poly {
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;
+}
+CALL poly 80 100 80;
+
+//use a variable without declaration
+VAR myvar;
+myvar=4;
+IF(myvarr==4) {
+    GO 40;
+    TURN 90;
+    GO 40;
+    TURN 90;
+    GO 40;
+    TURN 90;
+    GO 40;
+    TURN 90;
+}
+
+//scope of variable
+VAR a;
+a = 1;
+
+PROCEDURE poly {
+a = 2;
+IF (a == 2){
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;}
+}
+
+CALL poly;
