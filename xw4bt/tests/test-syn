@@ -1,0 +1,88 @@
+VAR i;
+VAR counter;
+VAR m;
+i = 0;
+
+PROCEDURE poly {
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;
+GO 40;
+TURN PARAM;
+}
+
+PROCEDURE drawsquare {
+    GO PARAM;
+    TURN 90;
+    GO PARAM;
+    TURN 90;
+    GO PARAM;
+    TURN 90;
+    GO PARAM;
+    TURN 90;
+}
+
+PROCEDURE drawtriangle{
+GO PARAM;
+TURN 120;
+GO PARAM;
+TURN 120;
+GO PARAM;
+TURN 120;
+}
+
+PROCEDURE drawcircle {
+WHILE (i < 360){
+GO 10;
+TURN 10;
+i = i +10;
+}
+i = 0;
+}
+
+counter = 1;
+WHILE (counter < 10){
+IF (counter == 3){
+CALL drawtriangle 40 40 40;
+}
+IF(counter == 5) {
+CALL poly 80 100 80 100;
+}
+IF(counter == 7){
+CALL drawcircle;
+}
+CALL drawsquare 8 14 20 26;
+counter = counter + 1;
+}
+JUMP 40;
+m=0;
+TURN 90;
+WHILE(m<25) {
+    GO 2;
+    TURN 270;
+    JUMP 2;
+    TURN 90;
+    m=m+1;
+}
+TURN 90;
+JUMP 50;
+TURN 90;
+WHILE(m<50) {
+    GO 2;
+    TURN 90;
+    JUMP 2;
+    TURN 270;
+    m=m+1;
+}
+TURN 90;
+JUMP 10;
+TURN 90;
+GO 25;
+JUMP 10;
+GO 3;
+
+
+
